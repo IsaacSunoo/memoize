@@ -8,16 +8,26 @@ import CodingPage from './components/pages/CodingPage';
 import './App.css';
 
 class App extends Component {
-  state = {
-    prototypes
+  constructor() {
+    super();
+    this.state = {
+      prototypes
+    }
+
   }
 
   render() {
+    // console.log(this.state.prototypes);
+
     return (
       <Router>
         <div>
           <Route exact path='/' component={LandingPage} />
-          <Route path='/flashcards' component={FlashCardPage} prototypes={this.state.prototypes}/>
+          <Route path='/flashcards' render={props => (
+            <React.Fragment>
+              <FlashCardPage prototype={this.state.prototypes} />
+            </React.Fragment>
+          )} />
           <Route path='/quiz' component={QuizPage} />
           <Route path='/coding' component={CodingPage} />
         </div>

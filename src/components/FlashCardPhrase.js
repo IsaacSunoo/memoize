@@ -1,9 +1,14 @@
 import React from 'react';
 
-function FlashCardPhrase() {
+function FlashCardPhrase(props) {
+    console.log(props);
+
   return (
-    <div>
-        
+
+    <div className='frontside-card'>
+        <h5>
+            {props.protoName}
+        </h5>
     </div>
   )
 }
