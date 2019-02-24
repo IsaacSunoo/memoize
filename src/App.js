@@ -9,7 +9,7 @@ import './App.css';
 
 class App extends Component {
   state = {
-    prototypes,
+    prototypes
   }
 
   render() {
@@ -17,7 +17,7 @@ class App extends Component {
       <Router>
         <div>
           <Route exact path='/' component={LandingPage} />
-          <Route path='/flashcards' component={FlashCardPage} />
+          <Route path='/flashcards' component={FlashCardPage} prototypes={this.state.prototypes}/>
           <Route path='/quiz' component={QuizPage} />
           <Route path='/coding' component={CodingPage} />
         </div>

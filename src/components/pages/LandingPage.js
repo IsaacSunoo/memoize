@@ -1,10 +1,12 @@
 import React from 'react';
 import Header from '../layout/Header';
+import LandingInstructions from '../LandingInstructions';
 
 function LandingPage() {
   return (
     <div>
-        <Header />
+      <Header />
+      <div className='main-instructions'><LandingInstructions /></div>
 
     </div>
   )
