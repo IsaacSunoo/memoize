@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
 import Header from '../layout/Header';
+import FlashCardPhrase from '../FlashCardPhrase';
 
 class FlashCardPage extends Component {
-  render() {
+
+    render() {
+        // console.log(this.props.prototype);
+
+        const flashCard = this.props.prototype.map(proto => {
+            return <FlashCardPhrase key={proto.id} protoName={proto.prototype} />
+        })
+
     return (
-      <div>
+      <div className='flashcard-page-container'>
           <Header />
-          <h1>Flash Card Page</h1>
+          <div className='flash-welcome'>
+            <h1>Flash Cards</h1>
+            {flashCard}
+          </div>
       </div>
     )
   }
