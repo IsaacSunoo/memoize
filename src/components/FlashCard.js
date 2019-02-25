@@ -9,7 +9,6 @@ class FlashCard extends Component {
     }
 
     rotateCard = () => {
-        console.log('rotate card clicked');
         if (this.state.cardSide === 'phrase') {
             this.setState({
                 cardSide: 'answer'

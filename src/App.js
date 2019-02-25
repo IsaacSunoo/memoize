@@ -21,12 +21,16 @@ class App extends Component {
       <Router>
         <div>
           <Route exact path='/' component={LandingPage} />
-          <Route path='/flashcards' render={props => (
+          <Route path='/flashcards' render={() => (
             <React.Fragment>
               <FlashCardContainer prototype={this.state.prototypes} />
             </React.Fragment>
           )} />
-          <Route path='/quiz' component={QuizPage} />
+          <Route path='/quiz' render={() => (
+            <React.Fragment>
+              <QuizPage prototype={this.state.prototypes} />
+            </React.Fragment>
+          )} />
           <Route path='/coding' component={CodingPage} />
         </div>
       </Router>
