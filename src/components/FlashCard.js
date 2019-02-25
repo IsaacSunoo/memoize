@@ -39,9 +39,9 @@ class FlashCard extends Component {
                         </h5>
                     </div>
                     <div className='answer-card'>
-                        <h5>
+                        <h6>
                             {this.props.proto.answer}
-                        </h5>
+                        </h6>
                         <p>
                             Method Type: {this.props.proto.method}
                         </p>

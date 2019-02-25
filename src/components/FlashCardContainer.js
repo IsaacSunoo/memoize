@@ -11,10 +11,6 @@ class FlashCardContainer extends Component {
     }
 
     determineRangeValue = (e) => {
-        // let cardInfo = this.props.prototype.find(card => {
-        //     return parseInt(e.target.value) === card.id;
-        // })
-
         this.setState({
             rangeValue: e.target.value,
         })
