@@ -4,6 +4,7 @@ import LandingPage from './components/pages/LandingPage';
 import FlashCardContainer from './components/FlashCardContainer';
 import QuizPage from './components/pages/QuizPage';
 import CodingPage from './components/pages/CodingPage';
+import ResultsPage from './components/pages/ResultsPage';
 import './App.css';
 
 class App extends Component {
@@ -43,6 +44,7 @@ class App extends Component {
             </React.Fragment>
           )} />
           <Route path='/coding' component={CodingPage} />
+          <Route path='/results' component={ResultsPage} />
         </div>
       </Router>
     )

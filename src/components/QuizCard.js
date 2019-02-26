@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 
 class QuizCard extends Component {
-  constructor() {
-    super();
-    this.state = {
-      correctQuestions: [],
-      incorrectQuestions: [],
-      correctPercent: 0
-    }
-  }
+  // constructor() {
+  //   super();
+  //   this.state = {
+
+  //   }
+  // }
 
   displayOptions = () => {
     this.props.options.map(option => {
@@ -20,16 +18,15 @@ class QuizCard extends Component {
     console.log('taget value', e.target.value);
     console.log('prototype answer', this.props.proto.prototype);
     if (this.props.proto.prototype === e.target.value) {
-      this.state.correctQuestions.push(this.props.proto);
-      localStorage.setItem('correctPrototypes', JSON.stringify(this.state.correctQuestions));
-      console.log(this.state.correctQuestions);
+      this.props.correctQuestions.push(this.props.proto);
+      localStorage.setItem('correctPrototypes', JSON.stringify(this.props.correctQuestions));
+      console.log(this.props.correctQuestions);
     } else {
-      this.state.incorrectQuestions.push(this.props.proto);
-      localStorage.setItem('incorrectPrototypes', JSON.stringify(this.state.incorrectQuestions));
-      console.log(this.state.incorrectQuestions);
+      this.props.incorrectQuestions.push(this.props.proto);
+      localStorage.setItem('incorrectPrototypes', JSON.stringify(this.props.incorrectQuestions));
+      console.log(this.props.incorrectQuestions);
     }
   }
-
 
   render() {
     return (

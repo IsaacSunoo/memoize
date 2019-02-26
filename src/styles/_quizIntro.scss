@@ -1,0 +1,25 @@
+.quiz-intro-container {
+    margin: 150px;
+    background-color: #BFBFBF;
+    color: #000;
+    padding: 40px;
+}
+
+.quiz-intro {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.start-quiz {
+    display: flex;
+    justify-content: center;
+}
+
+.start-quiz-btn {
+    @include btn-style(#000);
+    margin-top: 50px;
+}

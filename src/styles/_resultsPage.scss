@@ -1,0 +1,20 @@
+.results-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.results-container {
+    margin: 40px 170px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'correct incorrect';
+}
+
+.correct-container {
+    grid-area: correct;
+}
+
+.incorrect-container {
+    grid-area: incorrect;
+}

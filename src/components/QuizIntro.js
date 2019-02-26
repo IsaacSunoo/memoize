@@ -1,18 +1,19 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class QuizIntro extends Component {
-
-  render() {
+function QuizIntro(props) {
       return (
-          <div>
-              <p>Test your knowledge on array prototypes.</p>
-              <p>Each question provides a definition for a specific array prototype.</p>
-              <p>Determine which one belongs to the definition</p>
-              <p>Are you ready?</p>
-              <button type='submit'>Begin Quiz</button>
-          </div>
+        <div className='quiz-intro-container'>
+            <div className='quiz-intro'>
+                <p>Test your knowledge on array prototypes.<br />
+                    Each question provides a definition for a specific array prototype.<br />
+                    Determine which prototype belongs to the definition<br />
+                    Are you ready?</p>
+            </div>
+            <div className='start-quiz'>
+                <button type='submit' onClick={props.display} className='start-quiz-btn'>Begin Quiz</button>
+            </div>
+        </div>
       )
-  }
 }
 
 export default QuizIntro;

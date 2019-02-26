@@ -5,7 +5,7 @@ function LandingInstructions() {
     <div className='instructions-container'>
         <h3>Welcome</h3>
           <p>Master array protoypes through</p>
-          <p>study cards, quizes, and live coding challenges.</p>
+          <p>study cards, quizes, and live coding challenges(coming soon).</p>
     </div>
   )
 }

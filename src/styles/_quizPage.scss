@@ -2,3 +2,13 @@
     margin-top: 70px;
     text-align: center;
 }
+
+.results-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.results-btn {
+    @include btn-style(#45FF0E);
+    margin-bottom: 30px;
+}
