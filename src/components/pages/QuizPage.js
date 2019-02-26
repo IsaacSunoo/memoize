@@ -10,7 +10,6 @@ class QuizPage extends Component {
     }
   }
 
-
   // determineSolution = (e) => {
   //   console.log(e.target.value);
   //   console.log(this.props.prototype.prototype);
@@ -23,25 +22,23 @@ class QuizPage extends Component {
   //     this.state.incorrectQuestions.push(this.props.proto);
   //     this.props.incorrectCounter++;
   //     console.log(this.state.incorrectQuestions);
-
   //   }
-
   // }
 
   render() {
     return (
       <div>
         <Header />
-        <h1>Quiz Page</h1>
+        <h1 className='quiz-title'>Prototype Quiz</h1>
         {this.props.prototype.map((proto, idx) => {
           this.state.options.push([proto.prototype, proto.incorrectChoices]);
           let merged = [].concat.apply([], this.state.options[idx]);
-          let ctr = merged.length, tempVal, randomIdx;
-          randomIdx = Math.floor(Math.random() * ctr);
-          ctr--;
-          tempVal = merged[ctr];
-          merged[ctr] = merged[randomIdx];
-          merged[randomIdx] = tempVal;
+          for (let i = merged.length - 1; i >= 0; i--) {
+            let randomIdx = Math.floor(Math.random() * (i + 1));
+            let idxOption = merged[randomIdx];
+            merged[randomIdx] = merged[i];
+            merged[i] = idxOption;
+          }
           return <QuizCard key={proto.id} proto={proto} options={merged}/>
         })
         }

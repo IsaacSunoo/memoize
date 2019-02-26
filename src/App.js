@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import LandingPage from './components/pages/LandingPage';
-import prototypes from './dataset/arrayPrototypes';
 import FlashCardContainer from './components/FlashCardContainer';
 import QuizPage from './components/pages/QuizPage';
 import CodingPage from './components/pages/CodingPage';
@@ -11,9 +10,21 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      prototypes
+      prototypes: []
     }
+  }
 
+  componentDidMount() {
+    fetch('http://memoize-datasets.herokuapp.com/api/v1/isData')
+      .then(response => response.json())
+      .then(proto => {
+        this.setState({
+          prototypes: proto.isData
+        })
+      })
+      .catch(err => {
+        throw new Error(err);
+      })
   }
 
   render() {
