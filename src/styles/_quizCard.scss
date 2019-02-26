@@ -1,0 +1,17 @@
+.quiz-card {
+    border: 2px solid #000;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px;
+    height: 130px
+}
+
+.answer-container {
+    display: flex;
+    justify-content: space-around;
+    // flex-direction: column;
+}
+
