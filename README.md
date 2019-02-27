@@ -30,8 +30,8 @@ Can you imagine a time without writing code without and provided array prototype
 The idea is to build out more study tools such as implementing a text editor to do on hands coding problems with the prototypes.  Better visuals and design would also like to be added as well as quiz questions being displayed individually instead of looking like a military quiz page.
 
 ## Project Tools:
-HTMl
-Javascript
-CSS
-React
-Sass
+* HTMl
+* Javascript
+* CSS
+* React
+* Sass
