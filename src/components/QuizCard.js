@@ -1,31 +1,22 @@
 import React, { Component } from 'react';
 
 class QuizCard extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
 
-  //   }
-  // }
+  compareAnswer = (e) => {
+    let { incorrectQuestions, proto, userAnswers } = this.props;
+    let input = e.target.value;
+    console.log(this.props);
 
-  displayOptions = () => {
-    this.props.options.map(option => {
-      return <button type='submit'>{option}</button>
-    })
-  }
 
-  determineSolution = (e) => {
-    console.log('taget value', e.target.value);
-    console.log('prototype answer', this.props.proto.prototype);
-    if (this.props.proto.prototype === e.target.value) {
-      this.props.correctQuestions.push(this.props.proto);
-      localStorage.setItem('correctPrototypes', JSON.stringify(this.props.correctQuestions));
-      console.log(this.props.correctQuestions);
-    } else {
-      this.props.incorrectQuestions.push(this.props.proto);
-      localStorage.setItem('incorrectPrototypes', JSON.stringify(this.props.incorrectQuestions));
-      console.log(this.props.incorrectQuestions);
+    if (proto.prototype !== input && !incorrectQuestions.includes(proto)) {
+      incorrectQuestions.push(proto);
+      userAnswers.push({ userAnswer: input, id: proto.id });
+    } else if (proto.prototype === input && incorrectQuestions.includes(proto)) {
+      let idx = incorrectQuestions.indexOf(proto);
+      incorrectQuestions.splice(idx, 1);
     }
+    console.log(incorrectQuestions);
+
   }
 
   render() {
@@ -34,11 +25,11 @@ class QuizCard extends Component {
         <div className='question-container'>
           <p><strong>{this.props.proto.id}.</strong> {this.props.proto.answer}</p>
         </div>
-        <div className='answer-container'>
+        <form className='answer-container'>
           {this.props.options.map((option, idx) => {
-            return <button key={idx+1} type='submit' onClick={this.determineSolution} value={option} className='quiz-btn'>{option}</button>
+            return <React.Fragment key={idx+1}><input key={idx + 1} type='radio' onClick={this.compareAnswer} value={option} className='quiz-btn' name={this.props.proto.id} /><label>{option}</label></React.Fragment>
           })}
-        </div>
+        </form>
       </div>
     )
   }

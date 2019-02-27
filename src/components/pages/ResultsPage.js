@@ -7,20 +7,13 @@ function ResultsPage(props) {
         <Header />
         <h2 className='results-title'>Quiz Results</h2>
         <div className='results-container'>
-            <div className='correct-container'>
-                <h4 >Correct Questions</h4>
-                {
-                    props.location.state.correctQuestions.map(question => {
-                        console.log(question.answer)
-                        return <p key={question.id}>{question.id}. {question.answer} <br/>Answer: {question.prototype}</p>
-                    })
-                }
-            </div>
             <div className='incorrect-container'>
-                <h4>Incorrect Questions</h4>
+                  <h4>Incorrect Questions</h4>
+                  {console.log(props)
+                  }
                 {
-                    props.location.state.incorrectQuestions.map(question => {
-                        return <p key={question.id}>{question.id}. {question.answer}<p>Answer: {question.prototype}</p></p>
+                    props.incorrectQuestion.map(question => {
+                        return <p key={question.id}>{question.id}. {question.answer}<br/>Answer: {question.prototype}</p>
                     })
                 }
             </div>

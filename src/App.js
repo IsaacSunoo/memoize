@@ -11,7 +11,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      prototypes: []
+      prototypes: [],
+      incorrectQuestions: []
     }
   }
 
@@ -26,6 +27,19 @@ class App extends Component {
       .catch(err => {
         throw new Error(err);
       })
+
+    let local = JSON.parse(localStorage.getItem('incorrectQuestions'));
+    if (local) {
+      this.setState({
+        incorrectQuestions: local
+      })
+    }
+  }
+
+  determineSolution = (newArr) => {
+    this.setState({
+      incorrectQuestions: newArr
+    })
   }
 
   render() {
@@ -40,11 +54,15 @@ class App extends Component {
           )} />
           <Route path='/quiz' render={() => (
             <React.Fragment>
-              <QuizPage prototype={this.state.prototypes} />
+              <QuizPage prototype={this.state.prototypes} determineSolution={this.determineSolution} incorrectQuestions={this.state.incorrectQuestions}/>
+            </React.Fragment>
+          )} />
+          <Route path='/results' render={() => (
+            <React.Fragment>
+              <ResultsPage incorrectQuestion={this.state.incorrectQuestions}/>
             </React.Fragment>
           )} />
           <Route path='/coding' component={CodingPage} />
-          <Route path='/results' component={ResultsPage} />
         </div>
       </Router>
     )

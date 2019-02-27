@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropdownMenu should match the snapshot with all data passed in correctly 1`] = `
+<div
+  className="menu-dropdown"
+>
+  <ul>
+    <li>
+      <Link
+        className="dropdown-link"
+        replace={false}
+        to="/"
+      >
+        Home
+      </Link>
+    </li>
+    <li>
+      <Link
+        className="dropdown-link"
+        replace={false}
+        to="/flashCards"
+      >
+        FlashCards
+      </Link>
+    </li>
+    <li>
+      <Link
+        className="dropdown-link"
+        replace={false}
+        to="/quiz"
+      >
+        Prototypes Quiz
+      </Link>
+    </li>
+    <li>
+      <Link
+        className="dropdown-link"
+        replace={false}
+        to="/coding"
+      >
+        Practice Coding
+      </Link>
+    </li>
+  </ul>
+</div>
+`;

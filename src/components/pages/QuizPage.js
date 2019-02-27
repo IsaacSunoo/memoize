@@ -9,10 +9,13 @@ class QuizPage extends Component {
     super();
     this.state = {
       options: [],
-      correctQuestions: [],
-      incorrectQuestions: [],
+      userAnswers: [],
       quizPage: true
     }
+  }
+
+  addToLocalStorage = () => {
+    localStorage.setItem('incorrectQuestions', JSON.stringify(this.props.incorrectQuestions));
   }
 
   displayQuiz = () => {
@@ -23,7 +26,6 @@ class QuizPage extends Component {
 
   render() {
     const displayQuiz = this.state.quizPage ? { display: 'none' } : {};
-
     return (
       <div>
         <Header />
@@ -33,6 +35,8 @@ class QuizPage extends Component {
         }
         <div style={displayQuiz}>
           <h1 className='quiz-title'>Prototype Quiz</h1>
+          {console.log('props', this.props)
+          }
           {this.props.prototype.map((proto, idx) => {
             this.state.options.push([proto.prototype, proto.incorrectChoices]);
             let merged = [].concat.apply([], this.state.options[idx]);
@@ -42,11 +46,11 @@ class QuizPage extends Component {
               merged[randomIdx] = merged[i];
               merged[i] = idxOption;
             }
-            return <QuizCard key={proto.id} proto={proto} options={merged} correctQuestions={this.state.correctQuestions} incorrectQuestions={this.state.incorrectQuestions}/>
+            return <QuizCard key={proto.id} proto={proto} options={merged} incorrectQuestions={this.props.incorrectQuestions} determineSolution={this.determineSolution} userAnswers={this.state.userAnswers}/>
           })
         }
           <div className='results-btn-container'>
-            <Link className='results-btn' to={{ pathname: '/results', state: {correctQuestions: this.state.correctQuestions, incorrectQuestions: this.state.incorrectQuestions} }}>Submit Quiz</Link>
+            <Link className='results-btn' onClick={this.addToLocalStorage} to={{ pathname: '/results', props: {incorrectQuestions: this.props.incorrectQuestions} }}>Submit Quiz</Link>
           </div>
         </div>
       </div>
