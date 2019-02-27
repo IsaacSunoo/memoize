@@ -19,7 +19,9 @@ exports[`QuizCard should match the snapshot with all data passed in correctly 1`
   <form
     className="answer-container"
   >
-    <label>
+    <label
+      key="1"
+    >
       <input
         className="quiz-btn"
         key="1"
@@ -43,7 +45,9 @@ exports[`QuizCard should match the snapshot with all data passed in correctly 1`
       />
       <Component />
     </label>
-    <label>
+    <label
+      key="2"
+    >
       <input
         className="quiz-btn"
         key="2"

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot with all data passed in correctly 1`] = `
+<div>
+  <div
+    className="header-container"
+  >
+    <div
+      className="title-menu"
+    >
+      <h1
+        className="header-title"
+      >
+        MasterPrototypes.
+      </h1>
+      <div
+        className="dropdown-container"
+      >
+        <button
+          className="menu-button"
+          onClick={[Function]}
+          type="submit"
+        >
+          <i
+            className="fas fa-grip-lines"
+          />
+        </button>
+      </div>
+      <div />
+    </div>
+  </div>
+</div>
+`;

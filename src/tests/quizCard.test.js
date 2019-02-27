@@ -82,8 +82,9 @@ describe('QuizCard', () => {
 
     it('should invoke the compare answer function', () => {
         wrapper.find('.quiz-btn').at(0).simulate('click', { target: { value: 'pop()' } });
+
         // console.log('wrapper', wrapper);
-        // console.log('wrapper prop', wrapper.instance().props.options)
+        // console.log('wrapper prop', wrapper.instance().prop.options)
         // console.log('incorrect Questions', wrapper.instance().props.incorrectQuestions)
 
     })

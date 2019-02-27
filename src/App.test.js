@@ -25,12 +25,8 @@ describe('App', () => {
     expect(wrapper.state('incorrectQuestions')).toEqual([]);
     wrapper.instance().determineSolution([1]);
     expect(wrapper.state('incorrectQuestions')).toEqual([1]);
+
   })
-
-
-
-
-
 
 })
 

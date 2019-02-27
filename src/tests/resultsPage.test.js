@@ -45,4 +45,6 @@ describe('ResultsPage', () => {
     it('should match the snapshot with all data passed in correctly', () => {
         expect(wrapper).toMatchSnapshot();
     });
+
+    
 });

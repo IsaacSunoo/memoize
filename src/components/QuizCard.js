@@ -29,7 +29,7 @@ class QuizCard extends Component {
         <form className='answer-container'>
           {this.props.options.map((option, idx) => {
 
-            return <label><input key={idx + 1} type='radio' onClick={this.compareAnswer} value={option} className='quiz-btn' name={this.props.proto.id} />{option}</label>
+            return <label key={idx + 1}><input key={idx + 1} type='radio' onClick={this.compareAnswer} value={option} className='quiz-btn' name={this.props.proto.id} />{option}</label>
           })}
         </form>
       </div>
