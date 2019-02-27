@@ -23,10 +23,10 @@ exports[`QuizPage should match the snapshot with all data passed in correctly 1`
       key="1"
       options={
         Array [
-          "shift()",
-          "unshift()",
           "pop()",
           "push()",
+          "unshift()",
+          "shift()",
         ]
       }
       proto={
@@ -50,10 +50,10 @@ exports[`QuizPage should match the snapshot with all data passed in correctly 1`
       key="2"
       options={
         Array [
-          "concat()",
-          "splice()",
-          "findIndex()",
           "copyWithin()",
+          "splice()",
+          "concat()",
+          "findIndex()",
         ]
       }
       proto={

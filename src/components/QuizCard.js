@@ -5,8 +5,6 @@ class QuizCard extends Component {
   compareAnswer = (e) => {
     let { incorrectQuestions, proto, userAnswers } = this.props;
     let input = e.target.value;
-    console.log('quiz card', proto);
-
     const isIncorrectQuestion = incorrectQuestions.find(question => {
       return question.id === proto.id;
     })

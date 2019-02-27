@@ -29,7 +29,6 @@ class App extends Component {
       })
 
     let local = JSON.parse(localStorage.getItem('incorrectQuestions'));
-    console.log('first call', local);
 
     if (local) {
       this.setState({

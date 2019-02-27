@@ -18,7 +18,6 @@ class QuizPage extends Component {
     this.props.incorrectQuestions.sort((a, b) => {
       return a.id - b.id;
     });
-
     localStorage.setItem('incorrectQuestions', JSON.stringify(this.props.incorrectQuestions));
   }
 
