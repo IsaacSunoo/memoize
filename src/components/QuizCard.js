@@ -27,7 +27,7 @@ class QuizCard extends Component {
         </div>
         <form className='answer-container'>
           {this.props.options.map((option, idx) => {
-            return <React.Fragment key={idx+1}><input key={idx + 1} type='radio' onClick={this.compareAnswer} value={option} className='quiz-btn' name={this.props.proto.id} /><label>{option}</label></React.Fragment>
+            return <React.Fragment key={idx + 1}><label><input key={idx + 1} type='radio' onClick={this.compareAnswer} value={option} className='quiz-btn' name={this.props.proto.id} />{option}</label></React.Fragment>
           })}
         </form>
       </div>

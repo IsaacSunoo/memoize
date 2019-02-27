@@ -1,7 +1,7 @@
 .header-container {
     background-color: #F4F4F4;
     color: #000;
-    font-family: 'Encode Sans Condensed', sans-serif;
+    font-family: $mainFont;
     padding: 10px;
     text-align: center;
 
@@ -11,25 +11,32 @@
         margin: 30px 0 0 30px;
         text-align: left;
 
-        .fa-grip-lines {
-            font-size: 2em;
-            -webkit-text-stroke: 2px $lightGrey;
+        .dropdown-container {
+            height: 26px;
+            width: 40px;
 
-            &:hover, &:focus {
-                font-size: 2.3em;
-                color: #080294;
+            .fa-grip-lines {
+                font-size: 2em;
+                -webkit-text-stroke: 2px $lightGrey;
+
+                &:hover, &:focus {
+                    font-size: 2.3em;
+                    color: #080294;
+                }
             }
+
+            button {
+                border: none;
+                text-decoration: none;
+                cursor: pointer;
+                outline: none;
+                background: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+            }
+
         }
 
-        button {
-            border: none;
-            text-decoration: none;
-            cursor: pointer;
-            outline: none;
-            background: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-        }
     }
 
     h1 {

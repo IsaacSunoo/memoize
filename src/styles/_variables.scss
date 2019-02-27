@@ -1,5 +1,6 @@
 $lightGrey: #F4F4F4;
 $lavender: #eb8bff;
+$mainFont: 'Encode Sans Condensed', sans-serif;
 
 @mixin btn-style($btnColor) {
     -moz-box-shadow: 0px 10px 14px -7px $btnColor;
