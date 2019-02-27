@@ -50,7 +50,7 @@ class QuizPage extends Component {
           })
         }
           <div className='results-btn-container'>
-            <Link className='results-btn' onClick={this.addToLocalStorage} to={{ pathname: '/results', props: {incorrectQuestions: this.props.incorrectQuestions} }}>Submit Quiz</Link>
+            <Link className='results-btn' onClick={this.addToLocalStorage} to={{ pathname: '/results', props: {incorrectQuestions: this.props.incorrectQuestions, userAnswers: this.state.userAnswers} }}>Submit Quiz</Link>
           </div>
         </div>
       </div>

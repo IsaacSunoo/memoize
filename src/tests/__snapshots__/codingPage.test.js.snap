@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CodingPage should match the snapshot with all data passed in correctly 1`] = `
+<div>
+  <Header />
+  <h1>
+    Coding Page... (coming soon)
+  </h1>
+</div>
+`;

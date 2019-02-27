@@ -7,8 +7,6 @@ function LandingPage() {
     <div>
       <Header />
       <div className='main-instructions'><LandingInstructions /></div>
-      {/* <img src='../../images/computer.jpeg'></img> */}
-
     </div>
   )
 }

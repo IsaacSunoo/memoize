@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuizIntro should match the snapshot with all data passed in correctly 1`] = `
+<div
+  className="quiz-intro-container"
+>
+  <div
+    className="quiz-intro"
+  >
+    <p>
+      Test your knowledge on array prototypes.
+      <br />
+      Each question provides a definition for a specific array prototype.
+      <br />
+      Determine which prototype belongs to the definition
+      <br />
+      Are you ready?
+    </p>
+  </div>
+  <div
+    className="start-quiz"
+  >
+    <button
+      className="start-quiz-btn"
+      onClick={[MockFunction]}
+      type="submit"
+    >
+      Begin Quiz
+    </button>
+  </div>
+</div>
+`;

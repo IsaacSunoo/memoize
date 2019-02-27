@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuizCard should match the snapshot with all data passed in correctly 1`] = `
+<div
+  className="quiz-card"
+>
+  <div
+    className="question-container"
+  >
+    <p>
+      <strong>
+        .
+      </strong>
+       
+    </p>
+  </div>
+  <form
+    className="answer-container"
+  >
+    <label>
+      <input
+        className="quiz-btn"
+        key="1"
+        onClick={[Function]}
+        type="radio"
+        value={
+          Object {
+            "answer": "Removes and returns the first item in an Array",
+            "id": 1,
+            "incorrectChoices": Array [
+              "pop()",
+              "push()",
+              "unshift()",
+            ],
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift",
+            "method": "mutator",
+            "prototype": "shift()",
+          }
+        }
+      />
+      <Component />
+    </label>
+    <label>
+      <input
+        className="quiz-btn"
+        key="2"
+        onClick={[Function]}
+        type="radio"
+        value={
+          Object {
+            "answer": "Shallow copies part of an array to another location in the same array and returns it, without modifying its size",
+            "id": 2,
+            "incorrectChoices": Array [
+              "splice()",
+              "findIndex()",
+              "concat()",
+            ],
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin",
+            "method": "mutator",
+            "prototype": "copyWithin()",
+          }
+        }
+      />
+      <Component />
+    </label>
+  </form>
+</div>
+`;

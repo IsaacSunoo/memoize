@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuizPage should match the snapshot with all data passed in correctly 1`] = `
+<div>
+  <Header />
+  <QuizIntro
+    display={[Function]}
+  />
+  <div
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  >
+    <h1
+      className="quiz-title"
+    >
+      Prototype Quiz
+    </h1>
+    <QuizCard
+      incorrectQuestions={Array []}
+      key="1"
+      options={
+        Array [
+          "push()",
+          "unshift()",
+          "shift()",
+          "pop()",
+        ]
+      }
+      proto={
+        Object {
+          "answer": "Removes and returns the first item in an Array",
+          "id": 1,
+          "incorrectChoices": Array [
+            "pop()",
+            "push()",
+            "unshift()",
+          ],
+          "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift",
+          "method": "mutator",
+          "prototype": "shift()",
+        }
+      }
+      userAnswers={Array []}
+    />
+    <QuizCard
+      incorrectQuestions={Array []}
+      key="2"
+      options={
+        Array [
+          "splice()",
+          "copyWithin()",
+          "findIndex()",
+          "concat()",
+        ]
+      }
+      proto={
+        Object {
+          "answer": "Shallow copies part of an array to another location in the same array and returns it, without modifying its size",
+          "id": 2,
+          "incorrectChoices": Array [
+            "splice()",
+            "findIndex()",
+            "concat()",
+          ],
+          "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin",
+          "method": "mutator",
+          "prototype": "copyWithin()",
+        }
+      }
+      userAnswers={Array []}
+    />
+    <div
+      className="results-btn-container"
+    >
+      <Link
+        className="results-btn"
+        onClick={[Function]}
+        replace={false}
+        to={
+          Object {
+            "pathname": "/results",
+            "props": Object {
+              "incorrectQuestions": Array [],
+              "userAnswers": Array [],
+            },
+          }
+        }
+      >
+        Submit Quiz
+      </Link>
+    </div>
+  </div>
+</div>
+`;

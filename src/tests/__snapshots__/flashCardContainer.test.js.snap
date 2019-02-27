@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlashCardContainer should match the snapshot with all data passed in correctly 1`] = `
+<div>
+  <Header />
+  <h2
+    className="flash-card-title"
+  >
+    FlashCards
+  </h2>
+  <section
+    className="flash-card-section"
+  >
+    <div
+      className="flash-card-container"
+    >
+      <FlashCard
+        key="1"
+        proto={
+          Object {
+            "answer": "Removes and returns the first item in an Array",
+            "id": 1,
+            "incorrectChoices": Array [
+              "pop()",
+              "push()",
+              "unshift()",
+            ],
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift",
+            "method": "mutator",
+            "prototype": "shift()",
+          }
+        }
+      />
+    </div>
+    <input
+      className="range-bar"
+      max="30"
+      min="1"
+      onChange={[Function]}
+      type="range"
+      value={1}
+    />
+    <p
+      className="card-number"
+    >
+      1
+       / 30
+    </p>
+  </section>
+</div>
+`;

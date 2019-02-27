@@ -5,7 +5,7 @@ function CodingPage() {
   return (
     <div>
         <Header />
-        <h1>Coding Page</h1>
+        <h1>Coding Page... (coming soon)</h1>
     </div>
   )
 }

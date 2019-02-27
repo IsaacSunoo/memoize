@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlashCards should match the snapshot with all data passed in correctly 1`] = `
+<div
+  className="card-shadow"
+>
+  <div
+    className="main-card"
+    onClick={[Function]}
+    style={
+      Object {
+        "transform": "rotateY(0deg)",
+      }
+    }
+  >
+    <div
+      className="phrase-card"
+    >
+      <h5 />
+    </div>
+    <div
+      className="answer-card"
+    >
+      <h6 />
+      <p>
+        Method Type: 
+      </p>
+      <p>
+        Reference Link: 
+        <a>
+          Learn More
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+`;

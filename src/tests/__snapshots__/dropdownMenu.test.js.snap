@@ -8,6 +8,7 @@ exports[`DropdownMenu should match the snapshot with all data passed in correctl
     <li>
       <Link
         className="dropdown-link"
+        onClick={[Function]}
         replace={false}
         to="/"
       >
@@ -17,6 +18,7 @@ exports[`DropdownMenu should match the snapshot with all data passed in correctl
     <li>
       <Link
         className="dropdown-link"
+        onClick={[Function]}
         replace={false}
         to="/flashCards"
       >
@@ -26,6 +28,7 @@ exports[`DropdownMenu should match the snapshot with all data passed in correctl
     <li>
       <Link
         className="dropdown-link"
+        onClick={[Function]}
         replace={false}
         to="/quiz"
       >
@@ -35,6 +38,17 @@ exports[`DropdownMenu should match the snapshot with all data passed in correctl
     <li>
       <Link
         className="dropdown-link"
+        onClick={[Function]}
+        replace={false}
+        to="/results"
+      >
+        Quiz Results
+      </Link>
+    </li>
+    <li>
+      <Link
+        className="dropdown-link"
+        onClick={[Function]}
         replace={false}
         to="/coding"
       >

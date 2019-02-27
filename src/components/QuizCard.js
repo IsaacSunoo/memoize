@@ -7,7 +7,6 @@ class QuizCard extends Component {
     let input = e.target.value;
     console.log(this.props);
 
-
     if (proto.prototype !== input && !incorrectQuestions.includes(proto)) {
       incorrectQuestions.push(proto);
       userAnswers.push({ userAnswer: input, id: proto.id });
@@ -15,8 +14,6 @@ class QuizCard extends Component {
       let idx = incorrectQuestions.indexOf(proto);
       incorrectQuestions.splice(idx, 1);
     }
-    console.log(incorrectQuestions);
-
   }
 
   render() {
