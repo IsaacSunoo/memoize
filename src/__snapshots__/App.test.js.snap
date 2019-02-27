@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot with all data passed in correctly 1`] = `
+<BrowserRouter>
+  <div>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Route
+      path="/flashcards"
+      render={[Function]}
+    />
+    <Route
+      path="/quiz"
+      render={[Function]}
+    />
+    <Route
+      path="/results"
+      render={[Function]}
+    />
+    <Route
+      component={[Function]}
+      path="/coding"
+    />
+  </div>
+</BrowserRouter>
+`;

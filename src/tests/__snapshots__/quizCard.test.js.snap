@@ -9,9 +9,11 @@ exports[`QuizCard should match the snapshot with all data passed in correctly 1`
   >
     <p>
       <strong>
+        1
         .
       </strong>
        
+      Removes and returns the first item in an Array
     </p>
   </div>
   <form
@@ -21,6 +23,7 @@ exports[`QuizCard should match the snapshot with all data passed in correctly 1`
       <input
         className="quiz-btn"
         key="1"
+        name={1}
         onClick={[Function]}
         type="radio"
         value={
@@ -44,6 +47,7 @@ exports[`QuizCard should match the snapshot with all data passed in correctly 1`
       <input
         className="quiz-btn"
         key="2"
+        name={1}
         onClick={[Function]}
         type="radio"
         value={

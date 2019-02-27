@@ -30,6 +30,8 @@ const mockData = [{
 }
 ]
 
+
+
 const optionsArrMock = [{
     "id": 1,
     "prototype": "shift()",
@@ -65,7 +67,7 @@ describe('QuizCard', () => {
         wrapper = shallow(
             <QuizCard
                 key={mockData.id}
-                proto={mockData}
+                proto={mockData[0]}
                 options={optionsArrMock}
                 incorrectQuestions={incorrectQuestionsMock}
                 determineSolution={determineSolutionMock}
@@ -79,9 +81,10 @@ describe('QuizCard', () => {
     });
 
     it('should invoke the compare answer function', () => {
-        wrapper.find('.quiz-btn').at(0).simulate('click', { target: { value: 'shift()' } });
-        console.log('wrapper', wrapper);
+        wrapper.find('.quiz-btn').at(0).simulate('click', { target: { value: 'pop()' } });
+        // console.log('wrapper', wrapper);
+        // console.log('wrapper prop', wrapper.instance().props.options)
+        // console.log('incorrect Questions', wrapper.instance().props.incorrectQuestions)
 
-        expect(compareAnswer).toHaveBeenCalled();
     })
 });

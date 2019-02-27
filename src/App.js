@@ -29,11 +29,14 @@ class App extends Component {
       })
 
     let local = JSON.parse(localStorage.getItem('incorrectQuestions'));
+    console.log('first call', local);
+
     if (local) {
       this.setState({
         incorrectQuestions: local
       })
     }
+    console.log(local);
   }
 
   determineSolution = (newArr) => {

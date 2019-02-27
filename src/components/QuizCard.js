@@ -5,12 +5,16 @@ class QuizCard extends Component {
   compareAnswer = (e) => {
     let { incorrectQuestions, proto, userAnswers } = this.props;
     let input = e.target.value;
-    console.log(this.props);
+    console.log('quiz card', proto);
 
-    if (proto.prototype !== input && !incorrectQuestions.includes(proto)) {
+    const isIncorrectQuestion = incorrectQuestions.find(question => {
+      return question.id === proto.id;
+    })
+
+    if (proto.prototype !== input && !isIncorrectQuestion) {
       incorrectQuestions.push(proto);
       userAnswers.push({ userAnswer: input, id: proto.id });
-    } else if (proto.prototype === input && incorrectQuestions.includes(proto)) {
+    } else if (proto.prototype === input && isIncorrectQuestion) {
       let idx = incorrectQuestions.indexOf(proto);
       incorrectQuestions.splice(idx, 1);
     }
@@ -24,7 +28,8 @@ class QuizCard extends Component {
         </div>
         <form className='answer-container'>
           {this.props.options.map((option, idx) => {
-            return <React.Fragment key={idx + 1}><label><input key={idx + 1} type='radio' onClick={this.compareAnswer} value={option} className='quiz-btn' name={this.props.proto.id} />{option}</label></React.Fragment>
+
+            return <label><input key={idx + 1} type='radio' onClick={this.compareAnswer} value={option} className='quiz-btn' name={this.props.proto.id} />{option}</label>
           })}
         </form>
       </div>
