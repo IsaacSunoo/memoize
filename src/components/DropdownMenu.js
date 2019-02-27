@@ -6,11 +6,11 @@ class DropdownMenu extends Component {
         return (
             <div className='menu-dropdown'>
                 <ul>
-                    <li><Link className='dropdown-link' to='/'>Home</Link></li>
-                    <li><Link className='dropdown-link' to='/flashCards'>FlashCards</Link></li>
-                    <li><Link className='dropdown-link' to='/quiz'>Prototypes Quiz</Link></li>
-                    <li><Link className='dropdown-link' to='/results'>Quiz Results</Link></li>
-                    <li><Link className='dropdown-link' to='/coding'>Practice Coding</Link></li>
+                    <li><Link className='dropdown-link' onClick={() => { this.props.displayDropdown() }} to='/'>Home</Link></li>
+                    <li><Link className='dropdown-link' onClick={() => { this.props.displayDropdown() }} to='/flashCards'>FlashCards</Link></li>
+                    <li><Link className='dropdown-link' onClick={() => { this.props.displayDropdown() }} to='/quiz'>Prototypes Quiz</Link></li>
+                    <li><Link className='dropdown-link' onClick={() => { this.props.displayDropdown() }} to='/results'>Quiz Results</Link></li>
+                    <li><Link className='dropdown-link' onClick={() => { this.props.displayDropdown() }} to='/coding'>Practice Coding</Link></li>
                 </ul>
             </div>
         )

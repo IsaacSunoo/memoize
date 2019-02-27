@@ -24,7 +24,7 @@ class Header extends Component {
                         </div>
                         <div>
                             {
-                                this.state.showDropdown ? <DropdownMenu /> : ''
+                                this.state.showDropdown ? <DropdownMenu displayDropdown={this.displayDropdown}/> : ''
                             }
 
                         </div>
