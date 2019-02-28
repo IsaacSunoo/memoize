@@ -1,5 +1,5 @@
 import React from 'react';
-import QuizPage from './QuizPage';
+import QuizPage from '../QuizPage';
 import { shallow } from 'enzyme';
 
 const determineSolutionMock = jest.fn();

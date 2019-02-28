@@ -16,6 +16,8 @@ class QuizCard extends Component {
       let idx = incorrectQuestions.indexOf(proto);
       incorrectQuestions.splice(idx, 1);
     }
+    console.log('incorrect Questions array:', incorrectQuestions);
+
   }
 
   render() {
@@ -27,7 +29,7 @@ class QuizCard extends Component {
         <form className='answer-container'>
           {this.props.options.map((option, idx) => {
 
-            return <label key={idx + 1}><input key={idx + 1} type='radio' onClick={this.compareAnswer} value={option} className='quiz-btn' name={this.props.proto.id} />{option}</label>
+            return <label key={idx + 1}><input key={idx + 1} type='radio' onChange={this.compareAnswer} value={option} className='quiz-btn' name={this.props.proto.id} />{option}</label>
           })}
         </form>
       </div>

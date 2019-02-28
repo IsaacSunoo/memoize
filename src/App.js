@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 import LandingPage from './components/pages/LandingPage';
 import FlashCardContainer from './components/FlashCardContainer';
 import QuizPage from './components/pages/QuizPage';
-import CodingPage from './components/pages/CodingPage';
+import CodingPage from './CodingPage';
 import ResultsPage from './components/pages/ResultsPage';
 import './App.css';
 
@@ -28,6 +28,17 @@ class App extends Component {
         throw new Error(err);
       })
 
+    this.populateLocalStorage();
+
+  }
+
+  determineSolution = (newArr) => {
+    this.setState({
+      incorrectQuestions: newArr
+    })
+  }
+
+  populateLocalStorage() {
     let local = JSON.parse(localStorage.getItem('incorrectQuestions'));
 
     if (local) {
@@ -35,12 +46,6 @@ class App extends Component {
         incorrectQuestions: local
       })
     }
-  }
-
-  determineSolution = (newArr) => {
-    this.setState({
-      incorrectQuestions: newArr
-    })
   }
 
   render() {
